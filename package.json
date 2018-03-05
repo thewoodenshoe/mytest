@@ -1,0 +1,29 @@
+{
+  "name": "studenttransscript",
+  "version": "1.0.0",
+  "description": "Pull transcript data from Banner via the API and create an PDF transcript file",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://hammond.cofc.edu/stewartpa/studentTranscript.git"
+  },
+  "keywords": [
+    "student",
+    "api",
+    "git",
+    "banner",
+    "cofc",
+    "transcript"
+  ],
+  "author": "P.Stewart (CofC)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "pdfkit": "^0.8.3",
+    "request": "^2.83.0"
+  }
+}
