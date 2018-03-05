@@ -28,7 +28,15 @@ app.get('/api/:nr',function(req,res){
   myArray = []
   /* 
   ***** RAMIRO
-  Hieronder werkt niet. De console.log toont data asynchroon, dus gaat toont eerder dan de apiHandler klaar is.
+  Hieronder werkt niet. De console.log toont geen data (synchroom vs asynchroon).. ja ik snap het: welcome to node :)
+  Als ik de request in de code hieronder uitvoer, krijg ik dus WEL data.
+  Verhuis ik de request naar een module, in dit geval apiHandler, dan worden de stappen na de call gelijktijdig 
+  uitgevoerd. Dus de console.log wordt uitgevoerd voordat de apiHandler klaar is. Ik heb een Promise gemaakt in
+  de apiHandler. ik dacht dat dit het zou voorkomen????
+
+
+  Vraag 2: mijn doel is om data van verschillende api calls te verzamelen. Met deze 3 calls wil ik een PDF genereren.
+  Is wat ik doe het juiste? Dus in een array stoppen en de array uit eindelijk door sturen naar een "make pdf" module?
   *****
   */
   myArray.push(apiHandler.getData(studentId, 'personIdentifications'))
